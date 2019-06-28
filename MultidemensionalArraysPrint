@@ -1,0 +1,46 @@
+package com.luxoft.basics.part3.xtasks;
+
+import java.util.Arrays;
+
+public class T2_BattleField
+{
+
+    /**
+     * TODO PUT YOUR DESIGN HERE
+     */
+    String[][] battleField = {
+            {" ", " ", " ", " ", " ", " ", " ", " ", " "},
+            {" A", " ", " ", " ", " ", " ", " ", " ", " "},
+            {" ", " B", " ", " ", " ", " ", " ", " ", " "},
+            {" ", " ", " C", " ", " ", " ", " ", " ", " "},
+            {" ", " ", " ", " D", " ", " ", " ", " ", " "},
+            {" ", " ", " ", " ", " E", " ", " ", " ", " "},
+            {" ", " ", " ", " ", " ", " F", " ", " ", " "},
+            {" ", " ", " ", " ", " ", " ", " G", " ", " "},
+            {" ", " ", " ", "T", "E", " ", " ", " ", " H"}
+    };
+
+    void runTheGame() throws Exception
+    {
+        printCurrentBattleField();
+    }
+
+    /**
+     * Should print battle field to console output.
+     */
+    private void printCurrentBattleField()
+    {
+
+        int rows = 9;
+        int columns = 9;
+
+        for(int i = 0; i<rows; i++)
+        {
+            for(int j = 0; j<columns; j++)
+            {
+                System.out.print(battleField[i][j] +" | ");
+            }
+            System.out.println();
+        }
+
+    }
