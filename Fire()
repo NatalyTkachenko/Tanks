@@ -1,0 +1,26 @@
+void fire() {
+        int step = 1;
+        int direction = tankDirection;
+        
+
+        bulletX = tankX + 25;
+        bulletY = tankY + 25;
+
+        while (bulletX > -25 && bulletX < 590 && bulletY > -25 && bulletY < 590) {
+            if (direction == 1) {
+                bulletY -= step;
+
+            } else if (direction == 2) {
+                bulletY += step;
+
+            } else if (direction == 3) {
+                bulletX -= step;
+
+            } else {
+                bulletX += step;
+
+            }
+            repaint();
+            sleep(bulletSpeed);
+
+        }
